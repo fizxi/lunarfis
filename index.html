@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LUNARFIS — Jelajahi. Ciptakan. Terhubung.</title>
+<meta name="description" content="LUNARFIS adalah kelompok kreatif digital sekaligus komunitas game yang berfokus pada teknologi, kreativitas, kolaborasi, proyek, gaming, dan eksplorasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+<!-- Custom cursor glow -->
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="navbar__brand">
+      <span class="moon-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="26" height="26">
+          <circle cx="20" cy="20" r="17" fill="none" stroke="var(--soft-blue)" stroke-width="1.2" opacity="0.5"></circle>
+          <path d="M24 6.5A15.5 15.5 0 1 0 24 33.5 12 12 0 0 1 24 6.5Z" fill="var(--soft-blue)"></path>
+        </svg>
+      </span>
+      <span class="navbar__name">LUNARFIS</span>
+    </a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link active" data-section="home">Beranda</a>
+      <a href="#about" class="nav-link" data-section="about">Tentang</a>
+      <a href="#members" class="nav-link" data-section="members">Anggota</a>
+      <a href="#projects" class="nav-link" data-section="projects">Proyek</a>
+      <a href="#activities" class="nav-link" data-section="activities">Kegiatan</a>
+      <a href="#gallery" class="nav-link" data-section="gallery">Galeri</a>
+      <a href="#contact" class="nav-link" data-section="contact">Kontak</a>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Buka/tutup menu navigasi" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="hero__orbit" aria-hidden="true">
+    <div class="orbit-ring orbit-ring--1"></div>
+    <div class="orbit-ring orbit-ring--2"></div>
+    <div class="orbit-ring orbit-ring--3"></div>
+    <div class="hero-moon">
+      <div class="hero-moon__crater c1"></div>
+      <div class="hero-moon__crater c2"></div>
+      <div class="hero-moon__crater c3"></div>
+      <div class="hero-moon__terminator"></div>
+    </div>
+  </div>
+
+  <div class="hero__content reveal">
+    <p class="eyebrow">SELAMAT DATANG DI</p>
+    <h1 class="hero__title">LUNARFIS</h1>
+    <p class="hero__tagline">Jelajahi. Ciptakan. Terhubung.</p>
+    <p class="hero__desc">Sebuah kelompok kreatif sekaligus komunitas game yang dibangun atas dasar teknologi, ide, persahabatan, gaming, dan keinginan untuk menciptakan sesuatu yang bermakna.</p>
+    <div class="hero__actions">
+      <a href="#about" class="btn btn--primary">Jelajahi LUNARFIS</a>
+      <a href="#projects" class="btn btn--ghost">Proyek Kami</a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Gulir ke bagian Tentang">
+    <span></span>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <p class="eyebrow reveal">SIAPA KAMI</p>
+    <h2 class="section-title reveal">TENTANG LUNARFIS</h2>
+    <p class="section-intro reveal">LUNARFIS adalah kelompok anak muda kreatif sekaligus komunitas game yang memiliki rasa ingin tahu yang sama terhadap teknologi, kreativitas, gaming, dan ide-ide baru. Kami belajar bersama, membangun proyek bersama, bermain game bersama, dan menciptakan pengalaman yang bisa kami banggakan.</p>
+
+    <div class="feature-grid">
+      <article class="feature-card reveal">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M24 6c-9 3-13 9-13 17 0 6 3 10 6 12v5h14v-5c3-2 6-6 6-12 0-8-4-14-13-17Z"/>
+            <line x1="20" y1="42" x2="28" y2="42"/>
+          </svg>
+        </span>
+        <h3>Kreativitas</h3>
+        <p>Kami mengubah ide menjadi pengalaman digital yang bermakna.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="16" cy="18" r="6"/>
+            <circle cx="32" cy="18" r="6"/>
+            <path d="M6 40c0-6.6 4.5-11 10-11s10 4.4 10 11"/>
+            <path d="M22 40c0-6.6 4.5-11 10-11s10 4.4 10 11"/>
+          </svg>
+        </span>
+        <h3>Kolaborasi</h3>
+        <p>Kami percaya hal-hal besar dibangun secara bersama-sama.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="24" cy="24" r="17"/>
+            <path d="M24 24 33 15"/>
+            <circle cx="24" cy="24" r="2.4" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <h3>Eksplorasi</h3>
+        <p>Kami terus belajar, bereksperimen, dan menemukan kemungkinan baru.</p>
+      </article>
+
+      <article class="feature-card reveal">
+        <span class="feature-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="6" y="16" width="36" height="18" rx="9"/>
+            <line x1="15" y1="21" x2="15" y2="29"/>
+            <line x1="11" y1="25" x2="19" y2="25"/>
+            <circle cx="30" cy="22" r="1.6" fill="currentColor" stroke="none"/>
+            <circle cx="35" cy="27" r="1.6" fill="currentColor" stroke="none"/>
+          </svg>
+        </span>
+        <h3>Gaming</h3>
+        <p>Kami juga sebuah komunitas game — main bareng, kompetisi, dan seru-seruan bersama.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEMBERS ============ -->
+<section class="members" id="members">
+  <div class="container">
+    <p class="eyebrow reveal">KOLEKTIF KAMI</p>
+    <h2 class="section-title reveal">KENALI TIM KAMI</h2>
+    <p class="section-intro reveal">Orang-orang di balik LUNARFIS — sekelompok kecil pembangun, desainer, dan pemimpi.</p>
+
+    <div class="member-grid" id="memberGrid"></div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects" id="projects">
+  <div class="container">
+    <p class="eyebrow reveal">KARYA PILIHAN</p>
+    <h2 class="section-title reveal">PROYEK KAMI</h2>
+    <p class="section-intro reveal">Sekilas tentang apa yang telah kami bangun — mulai dari eksperimen hingga produk yang utuh.</p>
+
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ACTIVITIES ============ -->
+<section class="activities" id="activities">
+  <div class="container">
+    <p class="eyebrow reveal">CARA KAMI BEKERJA</p>
+    <h2 class="section-title reveal">APA YANG KAMI LAKUKAN</h2>
+    <p class="section-intro reveal">Ritme keseharian LUNARFIS — kebiasaan dan kegiatan yang membentuk hasil karya kami.</p>
+
+    <div class="activity-grid" id="activityGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <p class="eyebrow reveal">MOMEN</p>
+    <h2 class="section-title reveal">MOMEN LUNARFIS</h2>
+    <p class="section-intro reveal">Potret dari sesi kerja, peluncuran, dan begadang membangun proyek kami.</p>
+
+    <div class="gallery__filters reveal" id="galleryFilters">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="Tim">Tim</button>
+      <button class="filter-btn" data-filter="Proyek">Proyek</button>
+      <button class="filter-btn" data-filter="Kegiatan">Kegiatan</button>
+      <button class="filter-btn" data-filter="Acara">Acara</button>
+      <button class="filter-btn" data-filter="Di Balik Layar">Di Balik Layar</button>
+      <button class="filter-btn" data-filter="Gaming">Gaming</button>
+    </div>
+
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="achievements" id="achievements">
+  <div class="container">
+    <p class="eyebrow reveal">PENGHARGAAN</p>
+    <h2 class="section-title reveal">PENCAPAIAN KAMI</h2>
+    <p class="section-intro reveal">Pencapaian yang kami banggakan, dibangun satu proyek demi satu proyek.</p>
+
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <span class="stat__number" data-count="8">0</span><span class="stat__plus">+</span>
+        <p>Anggota</p>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-count="7">0</span><span class="stat__plus">+</span>
+        <p>Proyek</p>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-count="15">0</span><span class="stat__plus">+</span>
+        <p>Kegiatan</p>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-count="6">0</span><span class="stat__plus">+</span>
+        <p>Pencapaian</p>
+      </div>
+    </div>
+
+    <div class="achievement-grid" id="achievementGrid"></div>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="quote-section">
+  <div class="quote-section__moon" aria-hidden="true"></div>
+  <div class="container quote-section__content reveal">
+    <p class="quote-mark" aria-hidden="true">&#10077;</p>
+    <blockquote>Ide-ide hebat berawal dari rasa ingin tahu.</blockquote>
+    <cite>— LUNARFIS</cite>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact__grid">
+      <div class="contact__info reveal">
+        <p class="eyebrow">HUBUNGI KAMI</p>
+        <h2 class="section-title">MARI TERHUBUNG</h2>
+        <p class="section-intro">Punya ide, proyek, atau hal menarik untuk dibagikan? Hubungi LUNARFIS.</p>
+
+        <ul class="social-list">
+          <li>
+            <a href="https://instagram.com/lunarfis" target="_blank" rel="noopener">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></span>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://tiktok.com/@lunarfis" target="_blank" rel="noopener">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v9.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.5 2.5 2 4 5 4.3"/></svg></span>
+              TikTok
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/lunarfis" target="_blank" rel="noopener">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></span>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://youtube.com/@lunarfis" target="_blank" rel="noopener">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5Z" fill="currentColor" stroke="none"/></svg></span>
+              YouTube
+            </a>
+          </li>
+          <li>
+            <a href="https://discord.gg/lunarfis" target="_blank" rel="noopener">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="5"/><circle cx="9" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+              Discord
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hello@lunarfis.com">
+              <span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></svg></span>
+              hello@lunarfis.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <div class="form-field">
+          <label for="name">Nama</label>
+          <input type="text" id="name" name="name" placeholder="Nama Anda" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-field">
+          <label for="message">Pesan</label>
+          <textarea id="message" name="message" rows="5" placeholder="Ceritakan tentang ide Anda..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--block">Kirim Pesan</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="navbar__name">LUNARFIS</span>
+      <p>Jelajahi. Ciptakan. Terhubung.</p>
+    </div>
+
+    <nav class="footer__links">
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#members">Anggota</a>
+      <a href="#projects">Proyek</a>
+      <a href="#activities">Kegiatan</a>
+      <a href="#gallery">Galeri</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+
+    <div class="footer__social">
+      <a href="https://instagram.com/lunarfis" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+      <a href="https://tiktok.com/@lunarfis" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 4v9.5a3.5 3.5 0 1 1-3-3.46"/><path d="M14 4c.5 2.5 2 4 5 4.3"/></svg></a>
+      <a href="https://github.com/lunarfis" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.6 2.8 5.5 3.1 5.5 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.1 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+      <a href="https://youtube.com/@lunarfis" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.5 9.5v5l4.5-2.5Z" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://discord.gg/lunarfis" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="6" width="16" height="12" rx="5"/><circle cx="9" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+    </div>
+  </div>
+  <p class="footer__copyright">© 2026 LUNARFIS. Seluruh hak cipta dilindungi.</p>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Tutup gambar">&times;</button>
+  <div class="lightbox__stage">
+    <div class="lightbox__img" id="lightboxImg"></div>
+    <p class="lightbox__caption" id="lightboxCaption"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
